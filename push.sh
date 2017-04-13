@@ -1,3 +1,5 @@
+# This is not the most current version of this file. Upload the most recent version.
+
 #!/bin/bash
 
 # push.sh: copy file(s) using scp to remote devices
@@ -53,7 +55,7 @@ for i in $@; do
 		if [[ $i == *u* ]]; then
 			echo $usage1
 			echo $usage2
-			#usage
+			#usage()
 			exit 0
 		fi
 	else
