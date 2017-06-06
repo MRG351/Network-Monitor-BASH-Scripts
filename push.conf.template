@@ -1,0 +1,40 @@
+# push.conf.template: configuration file template for push.sh
+# run push.sh with the -c option to specify that a configuration file will be used; e.g.
+# push.sh -c <push.conf>
+
+## Lines beginning with 'set', 'host' or 'file' will be interpretted
+## Lines beginning with pound symbol will be explicitly ignored, and
+## Lines beginning with anything BUT 'set', 'host' or 'file' will be implicitly ignored
+
+COMMAND OPTIONS:
+
+# syntax is set x with y; for example:
+# set user with host
+# set dstpath with host
+# set dstpath with file
+# more options are on the way...
+
+# keywords here are <set> <user/dstpath> <host/file>
+# push.sh will notify the user if a command option is invalid, and will quit.
+# run push.sh with -v option to see the effects of the specified command options
+# run push.sh with -b option (in conjunction with -v) to tell push.sh to exit after displaying the verbosity information and before copying files 
+
+HOST LINES:
+
+# For safety, specify the full path when specifying dstpath
+
+# Depending on the command options specified...
+#host   ip:port:user:dstpath
+#host   ip:port:user
+#host   ip:port:dstpath
+#host   ip:port
+
+FILE LINES:
+
+# For safety, specify the full file path when specifying filename
+# For safety, specify the full path when specifying dstpath
+
+# Depending on the command options specified...
+# file   filename
+# file   filename:dstpath         (depending on options)
+
